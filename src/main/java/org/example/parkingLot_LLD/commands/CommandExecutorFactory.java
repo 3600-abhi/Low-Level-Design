@@ -5,10 +5,11 @@ import org.example.parkingLot_LLD.exceptions.InvalidCommandException;
 import org.example.parkingLot_LLD.model.Command;
 import org.example.parkingLot_LLD.service.ParkingLotService;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class CommandExecutorFactory {
-    private Map<String, CommandExecutor> commands;
+    private final Map<String, CommandExecutor> commands = new HashMap<>();
 
     public CommandExecutorFactory(final ParkingLotService parkingLotService) {
         final OutputPrinter outputPrinter = new OutputPrinter();

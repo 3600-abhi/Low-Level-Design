@@ -24,8 +24,7 @@ public class InteractiveMode extends Mode {
             final String input = reader.readLine();
             final Command command = new Command(input);
             processCommand(command);
-            if
-            (command.getCommandName().equals(ExitCommandExecutor.COMMAND_NAME)) {
+            if (command.getCommandName().equals(ExitCommandExecutor.COMMAND_NAME)) {
                 break;
             }
         }

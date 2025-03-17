@@ -21,8 +21,7 @@ public class Command {
         }
 
         commandName = tokensList.get(0).toLowerCase();
-        tokensList.remove(0);
-        params = tokensList;
+        params = tokensList.stream().skip(1).toList();
     }
 
 
